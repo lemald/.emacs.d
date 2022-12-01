@@ -90,6 +90,11 @@
 (use-package company
   :hook prog-mode)
 
+(use-package flymake
+  :bind
+  (("M-n" . flymake-goto-next-error)
+   ("M-p" . flymake-goto-prev-error)))
+
 (use-package rust-mode)
 
 (use-package haskell-mode)

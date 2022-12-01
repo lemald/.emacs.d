@@ -2,6 +2,7 @@
 smex-items
 ido.last
 auto-save-list
+transient
 straight/build
 straight/repos
 straight/build-cache.el
