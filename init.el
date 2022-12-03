@@ -26,6 +26,8 @@
   (scroll-bar-mode -1))
 (if (fboundp 'mouse-wheel-mode)
   (mouse-wheel-mode -1))
+(if (fboundp 'menu-bar-mode)
+  (menu-bar-mode -1))
 
 (global-display-line-numbers-mode)
 (global-hl-line-mode 1)
@@ -40,6 +42,9 @@
   ;; Show emoji properly
   (when (member "Symbola" (font-family-list))
     (set-fontset-font t 'unicode "Symbola" nil 'prepend)))
+
+(when (eq system-type 'darwin)
+  (set-face-attribute 'default nil :font "Monaco-14"))
 
 (use-package solarized-theme
   :demand t
@@ -104,7 +109,17 @@
 
 (use-package haskell-mode)
 
+(use-package elixir-mode
+  :config
+  (add-hook 'elixir-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format nil t))))
+
+(if (file-directory-p
+      (concat (file-name-as-directory (getenv "HOME")) "elixir_ls"))
+    (add-to-list
+      'exec-path
+      (concat (file-name-as-directory (getenv "HOME"))
+	      (file-name-as-directory "elixir_ls"))))
+
 (use-package markdown-mode
   :config
-  (add-hook 'markdown-mode-hook (lambda () (auto-fill-mode 1)))
   (add-hook 'markdown-mode-hook (lambda () (flyspell-mode 1))))

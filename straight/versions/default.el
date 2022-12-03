@@ -4,6 +4,7 @@
  ("eglot" . "e501275e06952889056268dabe08ccd0dbaf23e5")
  ("el-get" . "caf80e20bc966c4036f293e1966370fe650240c5")
  ("eldoc" . "192bcd5571a84e4b4084a840565f40fbec0b0abc")
+ ("emacs-elixir" . "4974ff9a83daf50f2f03dc0d6d00871296e088b0")
  ("emacsmirror-mirror" . "cae49f7b22cae2e7250a005a3b35a347322315b2")
  ("exec-path-from-shell" . "ddd24dc823de9a94435b4d8ea7569161657f31e2")
  ("flymake" . "1efe5e3044d776122cf0a21b8d5e5f23ec0deb89")
