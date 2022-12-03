@@ -130,6 +130,10 @@
       (concat (file-name-as-directory (getenv "HOME"))
 	      (file-name-as-directory "elixir_ls"))))
 
+(use-package web-mode
+  :mode
+  "\\.html\\.eex\\'")
+
 (use-package markdown-mode
   :config
   (add-hook 'markdown-mode-hook (lambda () (flyspell-mode 1))))

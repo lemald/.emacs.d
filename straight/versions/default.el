@@ -24,6 +24,7 @@
  ("straight.el" . "3eca39dfc6797243ec7d1c6a7d45142407f73f88")
  ("transient" . "72d30284ab75c1497e23be310dcc53a4ecefa401")
  ("use-package" . "90787092a06e71a8b6aee23e06c662d15ebc05d0")
+ ("web-mode" . "4b8a695825fda366927894e498421f35fce1cbb9")
  ("with-editor" . "4da109748da0828b79198701eb641d5b724153ce")
  ("xref" . "7f878254b71c0716b0b231a02efcca290021a3f7"))
 :gamma
