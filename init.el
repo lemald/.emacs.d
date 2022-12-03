@@ -141,3 +141,5 @@
 (use-package dockerfile-mode
   :mode
   "Dockerfile\\'")
+
+(use-package terraform-mode)
