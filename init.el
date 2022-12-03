@@ -35,6 +35,8 @@
 
 (setq inhibit-splash-screen t)
 
+(setq confirm-kill-emacs 'y-or-n-p)
+
 ;; forward-sentence and related commands should expect sentences to
 ;; end with a single space.
 (setq sentence-end-double-space nil)
