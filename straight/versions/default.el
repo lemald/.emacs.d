@@ -17,6 +17,7 @@
  ("melpa" . "8e2676f0a686e56bd4ac56f79526fcbda37b0e29")
  ("nongnu-elpa" . "b0bf1871b0fd12c80e2bd758909054d94da57fe2")
  ("project" . "8f89b00ae6c5a85b042f9ec9c8ee490300f139de")
+ ("rainbow-delimiters" . "a32b39bdfe6c61c322c37226d66e1b6d4f107ed0")
  ("rust-mode" . "b4537b6f5fa65626c1bab944681b35769cab9b5c")
  ("smex" . "55aaebe3d793c2c990b39a302eb26c184281c42c")
  ("solarized-emacs" . "94e7c342da1b04326028708e5503973d554bd828")

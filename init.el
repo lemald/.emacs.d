@@ -111,6 +111,10 @@
   (("M-n" . flymake-goto-next-error)
    ("M-p" . flymake-goto-prev-error)))
 
+(use-package rainbow-delimiters
+  :hook prog-mode)
+
+;; Language-specific modes
 (use-package rust-mode)
 
 (use-package haskell-mode)
