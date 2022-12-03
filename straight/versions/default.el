@@ -1,6 +1,7 @@
 (("company-mode" . "00a739f9684c68c8445b04f33fb8536a07ae34bd")
  ("compat" . "7ca7d300d1d256f674f83932d2918d8e70cd28f6")
  ("dash.el" . "3df46d7d9fe74f52a661565888e4d31fd760f0df")
+ ("dockerfile-mode" . "52c6c00da1d31c0b6c29c74335b3af63ed6bf06c")
  ("eglot" . "e501275e06952889056268dabe08ccd0dbaf23e5")
  ("el-get" . "caf80e20bc966c4036f293e1966370fe650240c5")
  ("eldoc" . "192bcd5571a84e4b4084a840565f40fbec0b0abc")

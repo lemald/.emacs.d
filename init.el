@@ -127,3 +127,7 @@
 (use-package markdown-mode
   :config
   (add-hook 'markdown-mode-hook (lambda () (flyspell-mode 1))))
+
+(use-package dockerfile-mode
+  :mode
+  "Dockerfile\\'")
