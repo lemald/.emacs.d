@@ -99,7 +99,8 @@
 
 (use-package eglot
   :hook ((rust-mode . eglot-ensure)
-	 (haskell-mode . eglot-ensure))
+	 (haskell-mode . eglot-ensure)
+	 (elixir-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs '(rust-mode "rustup" "run" "stable" "rust-analyzer")))
 
