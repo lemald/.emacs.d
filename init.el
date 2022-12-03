@@ -33,6 +33,8 @@
 (global-hl-line-mode 1)
 (column-number-mode 1)
 
+(setq inhibit-splash-screen t)
+
 ;; forward-sentence and related commands should expect sentences to
 ;; end with a single space.
 (setq sentence-end-double-space nil)
