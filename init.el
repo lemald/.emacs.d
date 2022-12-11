@@ -52,10 +52,10 @@
 (when (eq system-type 'darwin)
   (set-face-attribute 'default nil :font "Monaco-14"))
 
-(use-package solarized-theme
+(use-package monokai-theme
   :demand t
   :config
-  (load-theme 'solarized-dark t))
+  (load-theme 'monokai t))
 
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
