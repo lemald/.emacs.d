@@ -116,7 +116,9 @@
   :hook prog-mode)
 
 ;; Language-specific modes
-(use-package rust-mode)
+(use-package rust-mode
+  :config
+  (add-hook 'rust-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format nil t))))
 
 (use-package haskell-mode)
 
