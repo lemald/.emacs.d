@@ -71,14 +71,6 @@
    ("M-X" . smex-major-mode-commands)
    ("C-c C-c M-x" . execute-extended-command)))
 
-;; Use mail-mode for my messages from mutt.
-(setq auto-mode-alist (append '(("/mutt" . mail-mode))
-		       auto-mode-alist))
-(add-hook 'mail-mode-hook (lambda () (auto-fill-mode 1)))
-(add-hook 'mail-mode-hook (lambda () (flyspell-mode 1)))
-(add-hook 'mail-mode-hook
-	  (lambda () (set (make-local-variable 'make-backup-files) nil)))
-
 ;; My main address
 (setq user-mail-address "eddie@lemald.org")
 
