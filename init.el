@@ -131,6 +131,8 @@
   :config
   (setq add-node-modules-path-command "echo \"$(npm root)/.bin\""))
 
+(use-package typescript-mode)
+
 (use-package tide
   :init
   (defun setup-tide-mode ()
@@ -164,3 +166,15 @@
   "Dockerfile\\'")
 
 (use-package terraform-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ignored-local-variable-values '((TeX-master . t) (TeX-engine . xetex))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
