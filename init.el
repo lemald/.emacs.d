@@ -97,7 +97,7 @@
   (add-to-list 'eglot-server-programs '(rust-mode "rustup" "run" "stable" "rust-analyzer")))
 
 (use-package company
-  :hook prog-mode)
+  :hook (prog-mode . company-mode))
 
 (use-package flymake
   :bind
@@ -105,7 +105,7 @@
    ("M-p" . flymake-goto-prev-error)))
 
 (use-package rainbow-delimiters
-  :hook prog-mode)
+  :hook (prog-mode . rainbow-delimiters-mode))
 
 ;; Language-specific modes
 (use-package rust-mode
