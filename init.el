@@ -154,7 +154,7 @@
 
 (use-package web-mode
   :mode
-  "\\.html\\.eex\\'"
+  "\\.html\\.h?eex\\'"
   "\\.tsx\\'")
 
 (use-package markdown-mode
