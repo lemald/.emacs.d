@@ -129,7 +129,7 @@
 
 (use-package add-node-modules-path
   :config
-  (setq add-node-modules-path-command "echo \"$(npm root)/.bin\""))
+  (setq add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
 
 (use-package typescript-mode)
 
