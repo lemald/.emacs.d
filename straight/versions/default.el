@@ -25,6 +25,7 @@
  ("markdown-mode" . "b1a862f0165b7bafe0f874738a55be1b1720dd7d")
  ("melpa" . "439ff5e57091d040ceab47b46a410da5a1f5241b")
  ("nongnu-elpa" . "e9d06c3dfe8b41a568dd1ba6fa10e284ef5380c1")
+ ("orderless" . "b24748093b00b37c3a572c4909f61c08fa27504f")
  ("pkg-info" . "76ba7415480687d05a4353b27fea2ae02b8d9d61")
  ("prettier-emacs" . "e9b73e81d3e1642aec682195f127a42dfb0b5774")
  ("project" . "f64bcf065c0731caecbdcff5ca1c7f2d711b5b1e")

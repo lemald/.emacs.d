@@ -129,6 +129,11 @@
   :config
   (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
 
+(use-package orderless
+  :demand t
+  :config
+  (setq completion-styles '(orderless)))
+
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
