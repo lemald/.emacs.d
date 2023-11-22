@@ -71,19 +71,18 @@
   (load-theme 'modus-vivendi))
 
 ;; https://github.com/radian-software/straight.el/issues/819
-(straight-use-package '(vertico
-			:files (:defaults "extensions/*")
-			:includes (vertico-buffer
-				   vertico-directory
-				   vertico-flat
-				   vertico-indexed
-				   vertico-mouse
-				   vertico-quick
-				   vertico-repeat
-				   vertico-reverse)))
-
 (use-package vertico
   :demand t
+  :straight (vertico
+	     :files (:defaults "extensions/*")
+	     :includes (vertico-buffer
+			vertico-directory
+			vertico-flat
+			vertico-indexed
+			vertico-mouse
+			vertico-quick
+			vertico-repeat
+			vertico-reverse))
   :init
   (vertico-mode))
 
