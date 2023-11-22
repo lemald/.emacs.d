@@ -19,6 +19,9 @@
 (require 'server)
 (unless (server-running-p) (server-start))
 
+;; Some of the following general-purpose configuration is roughly
+;; lifted from Emacs Bedrock: https://sr.ht/~ashton314/emacs-bedrock/
+
 ;; General editor behavior / appearance
 (if (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
@@ -38,6 +41,13 @@
 (setq confirm-kill-emacs 'y-or-n-p)
 
 (setq indent-tabs-mode nil)
+
+(setq auto-revert-avoid-polling t)
+(setq auto-revert-interval 5)
+(setq auto-revert-check-vc-info t)
+(global-auto-revert-mode)
+
+(savehist-mode)
 
 ;; forward-sentence and related commands should expect sentences to
 ;; end with a single space.
