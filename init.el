@@ -121,6 +121,14 @@
   :config
   (corfu-popupinfo-mode))
 
+;; Pretty icons for corfu
+(use-package kind-icon
+  :if (display-graphic-p)
+  :demand t
+  :after corfu
+  :config
+  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter))
+
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
