@@ -168,7 +168,8 @@
 	 (haskell-mode . eglot-ensure)
 	 (elixir-mode . eglot-ensure))
   :config
-  (add-to-list 'eglot-server-programs '(rust-mode "rustup" "run" "stable" "rust-analyzer")))
+  (add-to-list 'eglot-server-programs '(rust-mode "rustup" "run" "stable" "rust-analyzer"))
+  (fset #'jsonrpc--log-event #'ignore))
 
 (use-package flymake
   :bind
