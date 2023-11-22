@@ -70,8 +70,27 @@
   :config
   (load-theme 'modus-vivendi))
 
-(ido-mode 1)
-(setq ido-enable-flex-matching t)
+;; https://github.com/radian-software/straight.el/issues/819
+(straight-use-package '(vertico
+			:files (:defaults "extensions/*")
+			:includes (vertico-buffer
+				   vertico-directory
+				   vertico-flat
+				   vertico-indexed
+				   vertico-mouse
+				   vertico-quick
+				   vertico-repeat
+				   vertico-reverse)))
+
+(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode))
+
+(use-package vertico-directory
+  :after vertico
+  :bind (:map vertico-map
+              ("M-DEL" . vertico-directory-delete-word)))
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -84,12 +103,6 @@
   :ensure t
   :config
   (which-key-mode))
-
-(use-package smex
-  :bind
-  (("M-x" . smex)
-   ("M-X" . smex-major-mode-commands)
-   ("C-c C-c M-x" . execute-extended-command)))
 
 ;; My main address
 (setq user-mail-address "eddie@lemald.org")
