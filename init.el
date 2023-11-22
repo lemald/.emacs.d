@@ -24,13 +24,17 @@
 
 ;; General editor behavior / appearance
 (if (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
+    (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode)
-  (scroll-bar-mode -1))
-(if (fboundp 'mouse-wheel-mode)
-  (mouse-wheel-mode -1))
+    (scroll-bar-mode -1))
 (if (fboundp 'menu-bar-mode)
-  (menu-bar-mode -1))
+    (menu-bar-mode -1))
+
+;; Enable horizontal scrolling
+(setq mouse-wheel-tilt-scroll t)
+(setq mouse-wheel-flip-direction t)
+
+(pixel-scroll-precision-mode)
 
 (global-display-line-numbers-mode)
 (global-hl-line-mode 1)
@@ -62,10 +66,9 @@
 (when (eq system-type 'darwin)
   (set-face-attribute 'default nil :font "Monaco-14"))
 
-(use-package monokai-theme
-  :demand t
+(use-package emacs
   :config
-  (load-theme 'monokai t))
+  (load-theme 'modus-vivendi))
 
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
@@ -74,6 +77,13 @@
       `((".*" . ,temporary-file-directory)))
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
+
+;; which-key: shows a popup of available keybindings when typing a
+;; long key sequence (e.g. C-x ...)
+(use-package which-key
+  :ensure t
+  :config
+  (which-key-mode))
 
 (use-package smex
   :bind
