@@ -21,7 +21,6 @@
  ("magit" . "dda332b2a41569f5fd8c0c2c3c2dab902d48ceb4")
  ("markdown-mode" . "b1a862f0165b7bafe0f874738a55be1b1720dd7d")
  ("melpa" . "e0b516fcfb447d0cadcf90cd748b6cedba57000e")
- ("monokai-emacs" . "4a09c59f948ba5b602b6f395e667f53224fd75a2")
  ("nongnu-elpa" . "e9d06c3dfe8b41a568dd1ba6fa10e284ef5380c1")
  ("pkg-info" . "76ba7415480687d05a4353b27fea2ae02b8d9d61")
  ("prettier-emacs" . "e9b73e81d3e1642aec682195f127a42dfb0b5774")
