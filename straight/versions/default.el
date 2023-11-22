@@ -1,6 +1,6 @@
 (("add-node-modules-path" . "841e93dfed50448da66c89a977c9182bb18796a1")
- ("company-mode" . "7e401cbe168d14106a527194a7e3dc9e546edb6c")
  ("compat" . "b6b64e004cd35b8fe3c40fe5ca250826f65a3369")
+ ("corfu" . "41e35c23a3512df658cdea95b246977923af56f5")
  ("dash.el" . "6db80c711ce947f6c6fa11e5c2257fff2c79d139")
  ("dockerfile-mode" . "52c6c00da1d31c0b6c29c74335b3af63ed6bf06c")
  ("eglot" . "2b145778ba5e57f393e50aea76b28e518c401828")

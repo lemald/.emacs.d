@@ -89,6 +89,7 @@
 
 (use-package vertico-directory
   :after vertico
+  :demand t
   :bind (:map vertico-map
               ("M-DEL" . vertico-directory-delete-word)))
 
@@ -96,6 +97,30 @@
   :demand t
   :config
   (marginalia-mode))
+
+(use-package corfu
+  :demand t
+  :straight (corfu :files (:defaults "extensions/*")
+                   :includes (corfu-popupinfo))
+  :init
+  (global-corfu-mode)
+  (setq corfu-auto t)
+  :bind
+  (:map corfu-map
+        ("SPC" . corfu-insert-separator)
+        ("C-n" . corfu-next)
+        ("C-p" . corfu-previous)))
+
+;; Part of corfu
+(use-package corfu-popupinfo
+  :after corfu
+  :demand t
+  :hook (corfu-mode . corfu-popupinfo-mode)
+  :custom
+  (corfu-popupinfo-delay '(0.25 . 0.1))
+  (corfu-popupinfo-hide nil)
+  :config
+  (corfu-popupinfo-mode))
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -132,9 +157,6 @@
 	 (elixir-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs '(rust-mode "rustup" "run" "stable" "rust-analyzer")))
-
-(use-package company
-  :hook (prog-mode . company-mode))
 
 (use-package flymake
   :bind
@@ -179,7 +201,6 @@
     (setq flycheck-check-syntax-automatically '(save mode-enabled))
     (eldoc-mode +1)
     (tide-hl-identifier-mode +1)
-    (company-mode +1)
     (add-node-modules-path)
     (prettier-js-mode))
   (add-hook 'typescript-mode-hook #'setup-tide-mode)
