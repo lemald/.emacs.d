@@ -83,7 +83,7 @@
 				   vertico-reverse)))
 
 (use-package vertico
-  :ensure t
+  :demand t
   :init
   (vertico-mode))
 
@@ -91,6 +91,11 @@
   :after vertico
   :bind (:map vertico-map
               ("M-DEL" . vertico-directory-delete-word)))
+
+(use-package marginalia
+  :demand t
+  :config
+  (marginalia-mode))
 
 (setq backup-directory-alist
       `((".*" . ,temporary-file-directory)))
@@ -100,7 +105,7 @@
 ;; which-key: shows a popup of available keybindings when typing a
 ;; long key sequence (e.g. C-x ...)
 (use-package which-key
-  :ensure t
+  :demand t
   :config
   (which-key-mode))
 

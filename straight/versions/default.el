@@ -20,6 +20,7 @@
  ("jsonrpc" . "768f955f702a471c47f7ca1cf6ef57e5838892d5")
  ("let-alist" . "0c968ff216a2c91080d79272e85132fef6f14988")
  ("magit" . "dda332b2a41569f5fd8c0c2c3c2dab902d48ceb4")
+ ("marginalia" . "e4ff0838da33bf5102ee009ff28d541f0b51c9a3")
  ("markdown-mode" . "b1a862f0165b7bafe0f874738a55be1b1720dd7d")
  ("melpa" . "439ff5e57091d040ceab47b46a410da5a1f5241b")
  ("nongnu-elpa" . "e9d06c3dfe8b41a568dd1ba6fa10e284ef5380c1")
