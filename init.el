@@ -166,7 +166,9 @@
 (use-package eglot
   :hook ((rust-mode . eglot-ensure)
 	 (haskell-mode . eglot-ensure)
-	 (elixir-mode . eglot-ensure))
+	 (elixir-mode . eglot-ensure)
+         (typescript-ts-mode . eglot-ensure)
+         (tsx-ts-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs '(rust-mode "rustup" "run" "stable" "rust-analyzer"))
   (fset #'jsonrpc--log-event #'ignore))
@@ -203,30 +205,12 @@
   :config
   (setq add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
 
-(use-package typescript-mode)
-
-(use-package tide
-  :init
-  (defun setup-tide-mode ()
-    (interactive)
-    (tide-setup)
-    (flycheck-mode +1)
-    (setq flycheck-check-syntax-automatically '(save mode-enabled))
-    (eldoc-mode +1)
-    (tide-hl-identifier-mode +1)
-    (add-node-modules-path)
-    (prettier-js-mode))
-  (add-hook 'typescript-mode-hook #'setup-tide-mode)
-  (add-hook 'web-mode-hook (lambda ()
-			     (when (string-equal
-				     "tsx"
-				     (file-name-extension buffer-file-name))
-			       (setup-tide-mode)))))
+(add-hook 'typescript-ts-mode-hook 'add-node-modules-path -1)
+(add-hook 'tsx-ts-mode-hook 'add-node-modules-path -1)
 
 (use-package web-mode
   :mode
-  "\\.html\\.h?eex\\'"
-  "\\.tsx\\'")
+  "\\.html\\.h?eex\\'")
 
 (use-package markdown-mode
   :config
