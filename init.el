@@ -240,19 +240,17 @@
       (concat (file-name-as-directory (getenv "HOME"))
 	      (file-name-as-directory "elixir_ls"))))
 
-(use-package prettier-js)
+(use-package prettier-js
+  :hook ((typescript-ts-mode . prettier-js)
+	 (tsx-ts-mode . prettier-js)))
 
 (use-package add-node-modules-path
   :config
-  (setq add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
+  (setq add-node-modules-path-command '("echo \"$(npm root)/.bin\""))
+  :hook ((typescript-ts-mode . add-node-modules-path)
+	 (tsx-ts-mode . add-node-modules-path)))
 
-(defun setup-typescript-or-tsx-mode ()
-  (add-node-modules-path)
-  (prettier-js-mode))
-
-(add-hook 'typescript-ts-mode-hook 'setup-typescript-or-tsx-mode -1)
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode))
-(add-hook 'tsx-ts-mode-hook 'setup-typescript-or-tsx-mode -1)
 
 (use-package web-mode
   :mode
