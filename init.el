@@ -181,6 +181,18 @@
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
+;; Tree Sitter grammar installation
+(setq treesit-language-source-alist
+      '((typescript . ("https://github.com/tree-sitter/tree-sitter-typescript.git" "master" "typescript/src"))
+	(tsx . ("https://github.com/tree-sitter/tree-sitter-typescript.git" "master" "tsx/src"))))
+
+(dolist (entry treesit-language-source-alist)
+  (let ((name (car entry)))
+    (unless (treesit-language-available-p name)
+      (treesit-install-language-grammar name)
+      )
+    ))
+
 ;; Language-specific modes
 (use-package rust-mode
   :config
