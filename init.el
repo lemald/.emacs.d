@@ -205,8 +205,13 @@
   :config
   (setq add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
 
-(add-hook 'typescript-ts-mode-hook 'add-node-modules-path -1)
-(add-hook 'tsx-ts-mode-hook 'add-node-modules-path -1)
+(defun setup-typescript-or-tsx-mode ()
+  (add-node-modules-path)
+  (prettier-js-mode))
+
+(add-hook 'typescript-ts-mode-hook 'setup-typescript-or-tsx-mode -1)
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode))
+(add-hook 'tsx-ts-mode-hook 'setup-typescript-or-tsx-mode -1)
 
 (use-package web-mode
   :mode
