@@ -26,7 +26,6 @@
  ("prettier-emacs" . "e9b73e81d3e1642aec682195f127a42dfb0b5774")
  ("project" . "f64bcf065c0731caecbdcff5ca1c7f2d711b5b1e")
  ("rainbow-delimiters" . "f40ece58df8b2f0fb6c8576b527755a552a5e763")
- ("rust-mode" . "9c26dc1195ec05309ee15c014631fb9abd6cf5d2")
  ("s.el" . "dda84d38fffdaf0c9b12837b504b402af910d01d")
  ("straight.el" . "9b11112b2e7aedd994feb2d8f95bd66dbc5749a5")
  ("svg-lib" . "3595d9f1f7127ffa47d772ba0e727ecbb18bb8bd")

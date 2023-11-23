@@ -164,13 +164,13 @@
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
 (use-package eglot
-  :hook ((rust-mode . eglot-ensure)
+  :hook ((rust-ts-mode . eglot-ensure)
 	 (haskell-mode . eglot-ensure)
 	 (elixir-mode . eglot-ensure)
          (typescript-ts-mode . eglot-ensure)
          (tsx-ts-mode . eglot-ensure))
   :config
-  (add-to-list 'eglot-server-programs '(rust-mode "rustup" "run" "stable" "rust-analyzer"))
+  (add-to-list 'eglot-server-programs '(rust-ts-mode "rustup" "run" "stable" "rust-analyzer"))
   (fset #'jsonrpc--log-event #'ignore))
 
 (use-package flymake
@@ -184,7 +184,8 @@
 ;; Tree Sitter grammar installation
 (setq treesit-language-source-alist
       '((typescript . ("https://github.com/tree-sitter/tree-sitter-typescript.git" "master" "typescript/src"))
-	(tsx . ("https://github.com/tree-sitter/tree-sitter-typescript.git" "master" "tsx/src"))))
+	(tsx . ("https://github.com/tree-sitter/tree-sitter-typescript.git" "master" "tsx/src"))
+	(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git" "master"))))
 
 (dolist (entry treesit-language-source-alist)
   (let ((name (car entry)))
@@ -194,9 +195,8 @@
     ))
 
 ;; Language-specific modes
-(use-package rust-mode
-  :config
-  (add-hook 'rust-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format nil t))))
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
+(add-hook 'rust-ts-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format nil t)))
 
 (use-package haskell-mode)
 
