@@ -241,8 +241,8 @@
 	      (file-name-as-directory "elixir_ls"))))
 
 (use-package prettier-js
-  :hook ((typescript-ts-mode . prettier-js)
-	 (tsx-ts-mode . prettier-js)))
+  :hook ((typescript-ts-mode . prettier-js-mode)
+	 (tsx-ts-mode . prettier-js-mode)))
 
 (use-package add-node-modules-path
   :config
