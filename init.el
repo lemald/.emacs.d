@@ -144,6 +144,30 @@
   :bind (("C-c j" . avy-goto-line)
 	 ("s-j"   . avy-goto-char-timer)))
 
+(use-package consult
+  :ensure t
+  :bind (
+         ;; Drop-in replacements
+         ("C-x b" . consult-buffer)     ; orig. switch-to-buffer
+         ("M-y"   . consult-yank-pop)   ; orig. yank-pop
+         ;; Searching
+         ("M-s r" . consult-ripgrep)
+	 ("M-s g" . consult-git-grep)
+         ("M-s l" . consult-line)
+         ("M-s s" . consult-line)
+         ("M-s L" . consult-line-multi)
+         ("M-s o" . consult-outline)
+         ;; Isearch integration
+         :map isearch-mode-map
+         ("M-e" . consult-isearch-history)   ; orig. isearch-edit-string
+         ("M-s e" . consult-isearch-history) ; orig. isearch-edit-string
+         ("M-s l" . consult-line)            ; needed by consult-line to detect isearch
+         ("M-s L" . consult-line-multi)      ; needed by consult-line to detect isearch
+         )
+  :config
+  ;; Narrowing lets you restrict results to certain groups of candidates
+  (setq consult-narrow-key "<"))
+
 ;; which-key: shows a popup of available keybindings when typing a
 ;; long key sequence (e.g. C-x ...)
 (use-package which-key
