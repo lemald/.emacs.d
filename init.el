@@ -139,6 +139,11 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+(use-package avy
+  :demand t
+  :bind (("C-c j" . avy-goto-line)
+	 ("s-j"   . avy-goto-char-timer)))
+
 ;; which-key: shows a popup of available keybindings when typing a
 ;; long key sequence (e.g. C-x ...)
 (use-package which-key
