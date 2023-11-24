@@ -195,7 +195,7 @@
 (use-package eglot
   :hook ((rust-ts-mode . eglot-ensure)
 	 (haskell-mode . eglot-ensure)
-	 (elixir-mode . eglot-ensure)
+	 (elixir-ts-mode . eglot-ensure)
          (typescript-ts-mode . eglot-ensure)
          (tsx-ts-mode . eglot-ensure))
   :config
@@ -215,6 +215,8 @@
 (setq treesit-language-source-alist
       '((typescript . ("https://github.com/tree-sitter/tree-sitter-typescript.git" "master" "typescript/src"))
 	(tsx . ("https://github.com/tree-sitter/tree-sitter-typescript.git" "master" "tsx/src"))
+	(elixir . ("https://github.com/elixir-lang/tree-sitter-elixir.git" "main"))
+	(heex . ("https://github.com/phoenixframework/tree-sitter-heex.git" "main"))
 	(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git" "master"))))
 
 (dolist (entry treesit-language-source-alist)
@@ -228,9 +230,9 @@
 
 (use-package haskell-mode)
 
-(use-package elixir-mode
+(use-package elixir-ts-mode
   :config
-  (add-hook 'elixir-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format nil t))))
+  (add-hook 'elixir-ts-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format nil t))))
 
 (if (file-directory-p
       (concat (file-name-as-directory (getenv "HOME")) "elixir_ls"))
