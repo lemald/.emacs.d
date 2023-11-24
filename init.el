@@ -220,9 +220,7 @@
 (dolist (entry treesit-language-source-alist)
   (let ((name (car entry)))
     (unless (treesit-language-available-p name)
-      (treesit-install-language-grammar name)
-      )
-    ))
+      (treesit-install-language-grammar name))))
 
 ;; Language-specific modes
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
