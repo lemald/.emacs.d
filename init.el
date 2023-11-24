@@ -200,6 +200,7 @@
          (tsx-ts-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs '(rust-ts-mode "rustup" "run" "stable" "rust-analyzer"))
+  (setq eglot-connect-timeout nil)
   (fset #'jsonrpc--log-event #'ignore))
 
 (use-package flymake
@@ -250,7 +251,7 @@
   :hook ((typescript-ts-mode . add-node-modules-path)
 	 (tsx-ts-mode . add-node-modules-path)))
 
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . tsx-ts-mode))
+(require 'typescript-ts-mode)
 
 (use-package web-mode
   :mode
