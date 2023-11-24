@@ -221,7 +221,7 @@
       (treesit-install-language-grammar name))))
 
 ;; Language-specific modes
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-ts-mode))
+(require 'rust-ts-mode)
 (add-hook 'rust-ts-mode-hook (lambda () (add-hook 'before-save-hook 'eglot-format nil t)))
 
 (use-package haskell-mode)
