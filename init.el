@@ -141,7 +141,6 @@
 	 ("s-j"   . avy-goto-char-timer)))
 
 (use-package consult
-  :ensure t
   :bind (
          ;; Drop-in replacements
          ("C-x b" . consult-buffer)     ; orig. switch-to-buffer
