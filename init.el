@@ -30,10 +30,6 @@
 (if (fboundp 'menu-bar-mode)
     (menu-bar-mode -1))
 
-;; Enable horizontal scrolling
-(setq mouse-wheel-tilt-scroll t)
-(setq mouse-wheel-flip-direction t)
-
 (pixel-scroll-precision-mode)
 
 (global-display-line-numbers-mode)
