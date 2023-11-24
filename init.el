@@ -217,7 +217,8 @@
 	(tsx . ("https://github.com/tree-sitter/tree-sitter-typescript.git" "master" "tsx/src"))
 	(elixir . ("https://github.com/elixir-lang/tree-sitter-elixir.git" "main"))
 	(heex . ("https://github.com/phoenixframework/tree-sitter-heex.git" "main"))
-	(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git" "master"))))
+	(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git" "master"))
+	(dockerfile . ("https://github.com/camdencheek/tree-sitter-dockerfile.git" "main"))))
 
 (dolist (entry treesit-language-source-alist)
   (let ((name (car entry)))
@@ -261,8 +262,6 @@
   :config
   (add-hook 'markdown-mode-hook (lambda () (flyspell-mode 1))))
 
-(use-package dockerfile-mode
-  :mode
-  "Dockerfile\\'")
+(require 'dockerfile-ts-mode)
 
 (use-package terraform-mode)

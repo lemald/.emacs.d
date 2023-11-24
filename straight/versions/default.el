@@ -4,7 +4,6 @@
  ("consult" . "04c89250e7eb1bffd822bcfa57b6049af6da2ea6")
  ("corfu" . "41e35c23a3512df658cdea95b246977923af56f5")
  ("dash.el" . "6db80c711ce947f6c6fa11e5c2257fff2c79d139")
- ("dockerfile-mode" . "52c6c00da1d31c0b6c29c74335b3af63ed6bf06c")
  ("eglot" . "2b145778ba5e57f393e50aea76b28e518c401828")
  ("el-get" . "a5ba5852648a90ee0cde9fb5d72e69497d260eec")
  ("eldoc" . "7dd56ba328a126a237115c13f653e5f34fda8989")
