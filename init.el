@@ -195,6 +195,7 @@
          (tsx-ts-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs '(rust-ts-mode "rustup" "run" "stable" "rust-analyzer"))
+  (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
   (setq eglot-connect-timeout nil)
   (fset #'jsonrpc--log-event #'ignore))
 
