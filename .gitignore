@@ -8,3 +8,4 @@ straight/build-cache.el
 eln-cache
 .cache
 tree-sitter
+eshell
