@@ -253,7 +253,7 @@
 
 (use-package web-mode
   :mode
-  "\\.html\\.h?eex\\'")
+  "\\.html\\.eex\\'")
 
 (use-package markdown-mode
   :config
