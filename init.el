@@ -214,6 +214,7 @@
 	(elixir . ("https://github.com/elixir-lang/tree-sitter-elixir.git" "main"))
 	(heex . ("https://github.com/phoenixframework/tree-sitter-heex.git" "main"))
 	(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git" "master"))
+	(yaml . ("https://github.com/ikatyang/tree-sitter-yaml.git" "master"))
 	(dockerfile . ("https://github.com/camdencheek/tree-sitter-dockerfile.git" "main"))))
 
 (dolist (entry treesit-language-source-alist)
@@ -257,6 +258,8 @@
 (use-package markdown-mode
   :config
   (add-hook 'markdown-mode-hook (lambda () (flyspell-mode 1))))
+
+(require 'yaml-ts-mode)
 
 (require 'dockerfile-ts-mode)
 
