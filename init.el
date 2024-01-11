@@ -191,6 +191,7 @@
   :hook ((rust-ts-mode . eglot-ensure)
 	 (haskell-mode . eglot-ensure)
 	 (elixir-ts-mode . eglot-ensure)
+	 (heex-ts-mode . eglot-ensure)
          (typescript-ts-mode . eglot-ensure)
          (tsx-ts-mode . eglot-ensure))
   :config
