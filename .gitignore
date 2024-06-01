@@ -3,6 +3,7 @@ history
 auto-save-list
 transient
 straight/build
+straight/modified
 straight/repos
 straight/build-cache.el
 eln-cache
