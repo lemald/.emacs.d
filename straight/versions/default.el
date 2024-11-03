@@ -3,6 +3,7 @@
  ("compat" . "c1f94ac75d6ea7f93c8da51e3f78ab3f39dbc2a2")
  ("consult" . "afda4c68a4ebcc9104bf2a645848d7e92269f054")
  ("corfu" . "44424e7d04a5d58283bf8794d452a14e86341cb9")
+ ("csv-mode" . "6979fc18ebe133cfe2fca02efda9a9f0cd13428a")
  ("dash.el" . "1de9dcb83eacfb162b6d9a118a4770b1281bcd84")
  ("eglot" . "81eb273965be82cd56d7502cccd68b5231a8fbab")
  ("el-get" . "847901f07bdf67763fa3a6c0fb057048cd58603b")
