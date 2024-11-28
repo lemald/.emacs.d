@@ -215,6 +215,7 @@
 	(elixir . ("https://github.com/elixir-lang/tree-sitter-elixir.git" "main"))
 	(heex . ("https://github.com/phoenixframework/tree-sitter-heex.git" "main"))
 	(rust . ("https://github.com/tree-sitter/tree-sitter-rust.git" "master"))
+	(python . ("https://github.com/tree-sitter/tree-sitter-python.git" "master"))
 	(yaml . ("https://github.com/ikatyang/tree-sitter-yaml.git" "master"))
 	(dockerfile . ("https://github.com/camdencheek/tree-sitter-dockerfile.git" "main"))))
 
@@ -259,6 +260,8 @@
 (use-package markdown-mode
   :config
   (add-hook 'markdown-mode-hook (lambda () (flyspell-mode 1))))
+
+(add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode))
 
 (require 'yaml-ts-mode)
 
