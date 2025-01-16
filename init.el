@@ -54,7 +54,7 @@
 (setq sentence-end-double-space nil)
 
 (when (eq system-type 'gnu/linux)
-  (set-face-attribute 'default nil :font "Source Code Pro-11:weight=regular")
+  (set-face-attribute 'default nil :font "Noto Sans Mono-11:weight=regular")
   ;; Show emoji properly
   (when (member "Symbola" (font-family-list))
     (set-fontset-font t 'unicode "Symbola" nil 'prepend)))
