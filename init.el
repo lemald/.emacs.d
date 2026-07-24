@@ -270,3 +270,5 @@
 (use-package terraform-mode)
 
 (use-package csv-mode)
+
+(use-package proof-general)
