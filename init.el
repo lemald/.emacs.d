@@ -181,7 +181,7 @@
 (use-package exec-path-from-shell
   :demand t
   :config
-  (when (memq window-system '(mac ns x))
+  (when (memq window-system '(mac ns x pgtk))
     (exec-path-from-shell-initialize)))
 
 ;; Don't split off ediff into separate windows
