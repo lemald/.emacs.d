@@ -193,9 +193,11 @@
 	 (elixir-ts-mode . eglot-ensure)
 	 (heex-ts-mode . eglot-ensure)
          (typescript-ts-mode . eglot-ensure)
-         (tsx-ts-mode . eglot-ensure))
+         (tsx-ts-mode . eglot-ensure)
+	 (coq-mode . eglot-ensure))
   :config
   (add-to-list 'eglot-server-programs '(rust-ts-mode "rustup" "run" "stable" "rust-analyzer"))
+  (add-to-list 'eglot-server-programs '(coq-mode "coq-lsp"))
   (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
   (setq eglot-connect-timeout nil)
   (fset #'jsonrpc--log-event #'ignore))
