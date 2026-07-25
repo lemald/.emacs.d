@@ -273,4 +273,6 @@
 
 (use-package csv-mode)
 
-(use-package proof-general)
+(use-package proof-general
+  :init
+  (setq coq-compile-before-require t))
